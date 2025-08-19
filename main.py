@@ -3,7 +3,6 @@ import os
 temp = {}
 jadwal = {}
 
-#*  Abdul
 def manage_data(nama, jk, umur, bb, tb, nama_baru=None):
     if nama_baru and nama_baru != nama:
         temp[nama_baru] = (jk, umur, bb, tb)
@@ -53,7 +52,6 @@ def view_dataDiri(nama):
 
     return nama
 
-#*  Farhan
 def hitung_imt(berat, tinggi):
     imt = berat / ((tinggi / 100) ** 2)
     if imt < 18.5:
@@ -66,7 +64,6 @@ def hitung_imt(berat, tinggi):
         kategori = "Obesitas"
     return imt, kategori
 
-#*  Ajan
 def rekomendasi_olahraga(tujuan):
     olahraga = {
         1: {
@@ -90,7 +87,6 @@ def rekomendasi_olahraga(tujuan):
     for level, latihan in olahraga[tujuan].items():
         print(f"{level:8} :", ", ".join(latihan))
 
-#*  Fattah
 def tambah_jadwal():
     while True:
         os.system('cls')
@@ -183,7 +179,6 @@ def lihat_jadwal():
             print("Input tidak valid!\n")
             input("\nTekan Enter untuk kembali...")
 
-#*  Hanifa
 def kalori_harian(nama):
     jk, umur, bb, tb = temp[nama]
     list_aktivitas = {
